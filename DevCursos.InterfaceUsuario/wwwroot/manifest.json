@@ -1,0 +1,99 @@
+{
+	"_version": "1.9.0",
+	"sap.app": {
+		"id": "dev.cursos",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"title": "{{App.Name}}",
+		"description": "{{App.Description}}",
+		"applicationVersion": {
+			"version": "1.0.0"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_fiori_3",
+			"sap_fiori_3_dark",
+			"sap_fiori_3_hcb",
+			"sap_fiori_3_hcw",
+			"sap_belize",
+			"sap_belize_plus",
+			"sap_belize_hcb",
+			"sap_belize_hcw",
+			"sap_bluecrystal"
+		]
+	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "dev.cursos.app.App",
+			"type": "XML",
+			"async": true,
+			"id": "app"
+		},
+		"dependencies": {
+			"minUI5Version": "1.42.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.f": {},
+				"sap.uxap": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleUrl": "i18n/i18n.properties",
+					"supportedLocales": [
+						"",
+						"en"
+					],
+					"fallbackLocale": ""
+				}
+			}
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewPath": "dev.cursos",
+				"viewType": "XML",
+				"controlId": "app",
+				"controlAggregation": "pages",
+				"async": true,
+				"bypassed": {
+					"target": "notFound"
+				}
+			},
+			"routes": [
+				{
+					"pattern": "",
+					"name": "home",
+					"target": "home"
+				}
+			],
+			"targets": {
+				"home": {
+					"viewId": "home",
+					"viewName": "app.home.Home",
+					"append": true
+				}
+			}
+		},
+		"name": "dev.cursos",
+		"short_name": "dev.cursos",
+		"start_url": "index.html",
+		"display": "standalone",
+		"orientation": "portrait",
+		"icons": []
+	}
+}

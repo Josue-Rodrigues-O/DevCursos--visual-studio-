@@ -1,0 +1,18 @@
+<mvc:View
+    xmlns="sap.m"
+    height="100%"
+    displayBlock="true"
+    xmlns:mvc="sap.ui.core.mvc"
+    controllerName="dev.cursos.app.home.Home"
+>
+    <Page>
+        <headerContent>
+            <Image src="{/svgLogo}" width="{/imageWidth}"/>
+            <ToolbarSpacer />
+            <Title text="Dev Cursos" titleStyle="H2" />
+            <ToolbarSpacer />
+            <Button text="Entrar" />
+            <Button text="Cadastre-se" />
+        </headerContent>
+    </Page>
+</mvc:View>

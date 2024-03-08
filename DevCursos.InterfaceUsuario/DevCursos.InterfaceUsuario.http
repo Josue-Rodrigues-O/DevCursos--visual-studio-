@@ -1,0 +1,6 @@
+@DevCursos.InterfaceUsuario_HostAddress = http://localhost:5151
+
+GET {{DevCursos.InterfaceUsuario_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
