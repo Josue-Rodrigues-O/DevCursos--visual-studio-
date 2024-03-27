@@ -12,7 +12,7 @@ sap.ui.define([
 
         navegarPara(nomeDaRota, parametroDeRota) {
             const rota = this.getOwnerComponent().getRouter();
-            rota.navTo(nomeDaRota, parametroDeRota, true);
+            rota.navTo(nomeDaRota, parametroDeRota, false);
         },
 
         /**
