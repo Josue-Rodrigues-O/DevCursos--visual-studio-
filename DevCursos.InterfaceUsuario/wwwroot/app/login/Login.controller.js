@@ -4,26 +4,26 @@ sap.ui.define([
 ], function (BaseController, JSONModel) {
     'use strict';
 
-    const ROTA_HOME = "home";
+    const ROTA_LOGIN = "login"
 
-    const NAMESPACE = "dev.cursos.app.home.Home";
+    const NAMESPACE = "dev.cursos.app.login.Login";
     return BaseController.extend(NAMESPACE, {
         onInit: function () {
-            this.vincularRota(ROTA_HOME, this._aoCoincidirComRotaHome);
+            this.vincularRota(ROTA_LOGIN, this._aoCoincidirComRotaLogin);
+        },
+
+        aoClicarEmEntar: function () {
+            console.log("hellooo")
         },
         
-        _aoCoincidirComRotaHome: function () {
+        _aoCoincidirComRotaLogin: function () {
             // let svgLogo = sap.ui.require.toUrl("dev/cursos/resources/images/logo.svg");
-            let svgLogo = sap.ui.require.toUrl("dev/cursos/resources/images/puc-goias-horizontal.png");
+            let svgLogo = sap.ui.require.toUrl("dev/cursos/resources/images/home_banner_1.svg");
             this.getView().setModel(new JSONModel({
                 imageWidth: "50vw",
-                imageHeight: "8vh",
+                imageHeight: "100vh",
                 svgLogo: svgLogo
             }));
-        },
-        
-        aoClicarEmEntar() {
-            this.navegarPara("login")
         }
     });
 });

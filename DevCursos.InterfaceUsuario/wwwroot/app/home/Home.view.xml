@@ -1,18 +1,234 @@
 <mvc:View
-    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns:t="sap.ui.table"
+    xmlns="sap.uxap"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:sf="sap.f"
+    xmlns:card="sap.f.cards"
+    xmlns:m="sap.m"
+    xmlns:u="sap.ui.unified"
     height="100%"
     displayBlock="true"
-    xmlns:mvc="sap.ui.core.mvc"
     controllerName="dev.cursos.app.home.Home"
 >
-    <Page>
+    <ObjectPageLayout id="entidadeDeEntidade"
+        enableLazyLoading="false"
+        showTitleInHeaderContent="true"
+        showEditHeaderButton="true"
+        showFooter="true"
+        editHeaderButtonPress="handleEditBtnPress">
+        <headerTitle>
+            <ObjectPageDynamicHeaderTitle>
+                <expandedHeading>
+                    <m:HBox justifyContent="SpaceBetween" width="95vw">
+                        <m:HBox>
+                            <m:VBox justifyContent="Center"
+                                class="sapUiSmallMarginEnd">
+                                <m:Text text="Institucional" />
+                            </m:VBox>
+                            <m:VBox justifyContent="Center"
+                                class="sapUiSmallMarginEnd">
+                                <m:Text text="Escolas" />
+                            </m:VBox>
+                            <m:VBox justifyContent="Center"
+                                class="sapUiSmallMarginEnd">
+                                <m:Text text="Eventos e Notícias" />
+                            </m:VBox>
+                            <m:VBox justifyContent="Center"
+                                class="sapUiSmallMarginEnd">
+                                <m:Text text="Biblioteca" />
+                            </m:VBox>
+                            <m:VBox justifyContent="Center"
+                                class="sapUiSmallMarginEnd">
+                                <m:Text text="Bolsas e Financiamentos" />
+                            </m:VBox>
+                            <m:VBox justifyContent="Center"
+                                class="sapUiSmallMarginEnd">
+                                <m:Text text="Serviços" />
+                            </m:VBox>
+                        </m:HBox>
+                        <m:HBox>
+                            <m:VBox justifyContent="Center"
+                                class="sapUiSmallMarginEnd">
+                                <m:Link
+                                    text="{i18n>Home.Atendimento}" />
+                            </m:VBox>
+                            <m:VBox justifyContent="Center"
+                                class="sapUiSmallMarginEnd">
+                                <m:Link
+                                    text="{i18n>Home.SOL}" />
+                            </m:VBox>
+                            <m:VBox justifyContent="Center">
+                                <ObjectPageHeaderActionButton
+                                    press="irParaLista"
+                                    icon="sap-icon://email"
+                                    tooltip="{i18n>Home.Email}"
+                                    type="Default" />
+                            </m:VBox>
+                        </m:HBox>
+                    </m:HBox>
+                </expandedHeading>
+
+                <snappedHeading>
+                    <m:HBox justifyContent="SpaceBetween" width="95vw">
+                        <m:HBox>
+                            <m:VBox
+                                justifyContent="Center"
+                                class="sapUiSmallMarginEnd">
+                                <m:Image
+                                    src="{/svgLogo}"
+                                    height="{/imageHeight}" />
+                            </m:VBox>
+                            <m:VBox
+                                justifyContent="Center"
+                                class="sapUiSmallMarginEnd">
+                                <m:ObjectIdentifier title="{i18n>Home.Graduacao}"
+                                    active="false" />
+                            </m:VBox>
+                            <m:VBox
+                                justifyContent="Center"
+                                class="sapUiSmallMarginEnd">
+                                <m:ObjectIdentifier title="{i18n>Home.PosGraguacao}"
+                                    active="false" />
+                            </m:VBox>
+                            <m:VBox
+                                justifyContent="Center"
+                                class="sapUiSmallMarginEnd">
+                                <m:ObjectIdentifier title="{i18n>Home.PesquisaEInovacao}"
+                                    active="false" />
+                            </m:VBox>
+                            <m:VBox
+                                justifyContent="Center"
+                                class="sapUiSmallMarginEnd">
+                                <m:ObjectIdentifier title="{i18n>Home.Extensao}"
+                                    active="false" />
+                            </m:VBox>
+                        </m:HBox>
+                        <m:HBox>
+                            <m:VBox justifyContent="Center"
+                                class="sapUiSmallMarginEnd">
+                                <m:Link
+                                    text="{i18n>Home.Atendimento}" />
+                            </m:VBox>
+                            <m:VBox justifyContent="Center"
+                                class="sapUiSmallMarginEnd">
+                                <m:Link
+                                    text="{i18n>Home.SOL}" />
+                            </m:VBox>
+                            <m:VBox justifyContent="Center"
+                                class="sapUiSmallMarginEnd">
+                                <ObjectPageHeaderActionButton id="closeColumn"
+                                    press="irParaLista"
+                                    icon="sap-icon://email"
+                                    tooltip="{i18n>Home.Email}"
+                                    type="Default" />
+                            </m:VBox>
+                            <m:VBox justifyContent="Center"
+                                class="sapUiSmallMarginEnd">
+                                <m:Button text="{i18n>Home.Entrar}" type="Emphasized"
+                                    press="aoClicarEmEntar" />
+                            </m:VBox>
+                            <m:VBox justifyContent="Center">
+                                <m:Button text="{i18n>Home.Cadastrar}" type="Default"
+                                    press="aoClicarEmEntar" />
+                            </m:VBox>
+                        </m:HBox>
+                    </m:HBox>
+                </snappedHeading>
+            </ObjectPageDynamicHeaderTitle>
+        </headerTitle>
+
         <headerContent>
-            <Image src="{/svgLogo}" width="{/imageWidth}"/>
-            <ToolbarSpacer />
-            <Title text="Dev Cursos" titleStyle="H2" />
-            <ToolbarSpacer />
-            <Button text="Entrar" />
-            <Button text="Cadastre-se" />
+            <m:HBox justifyContent="SpaceBetween">
+                <m:HBox>
+                    <m:VBox
+                        justifyContent="Center"
+                        class="sapUiSmallMarginEnd">
+                        <m:Image
+                            src="{/svgLogo}"
+                            height="{/imageHeight}" />
+                    </m:VBox>
+                    <m:VBox
+                        justifyContent="Center"
+                        class="sapUiSmallMarginEnd">
+                        <m:ObjectIdentifier title="{i18n>Home.Graduacao}"
+                            active="false" />
+                    </m:VBox>
+                    <m:VBox
+                        justifyContent="Center"
+                        class="sapUiSmallMarginEnd">
+                        <m:ObjectIdentifier title="{i18n>Home.PosGraguacao}"
+                            active="false" />
+                    </m:VBox>
+                    <m:VBox
+                        justifyContent="Center"
+                        class="sapUiSmallMarginEnd">
+                        <m:ObjectIdentifier title="{i18n>Home.PesquisaEInovacao}"
+                            active="false" />
+                    </m:VBox>
+                    <m:VBox
+                        justifyContent="Center"
+                        class="sapUiSmallMarginEnd">
+                        <m:ObjectIdentifier title="{i18n>Home.Extensao}"
+                            active="false" />
+                    </m:VBox>
+                </m:HBox>
+                <m:HBox>
+                    <m:VBox justifyContent="Center"
+                        class="sapUiSmallMarginEnd">
+                        <m:Button text="{i18n>Home.Entrar}" type="Emphasized"
+                            press="aoClicarEmEntar" />
+                    </m:VBox>
+                    <m:VBox justifyContent="Center">
+                        <m:Button text="{i18n>Home.Cadastrar}" type="Default"
+                            press="aoClicarEmEntar" />
+                    </m:VBox>
+                </m:HBox>
+            </m:HBox>
         </headerContent>
-    </Page>
+
+        <ObjectPageSection>
+            <subSections>
+                <ObjectPageSubSection>
+                    <blocks>
+                        <sf:Card>
+                            <sf:header>
+                                <card:Header
+                                    iconDisplayShape="Square"
+                                    iconBackgroundColor="Accent7"
+                                    iconSize="XL"
+                                    title="{i18n>Home.SouAluno}"
+                                    subtitle="{i18n>Home.SouAlunoDescricao}"
+                                    iconSrc="sap-icon://study-leave" />
+                            </sf:header>
+                        </sf:Card>
+                        <sf:Card>
+                            <sf:header>
+                                <card:Header
+                                    iconDisplayShape="Square"
+                                    iconBackgroundColor="Accent6"
+                                    iconSize="XL"
+                                    title="{i18n>Home.SouProfessor}"
+                                    subtitle="{i18n>Home.SouProfessorDescricao}"
+                                    iconSrc="sap-icon://education" />
+                            </sf:header>
+                        </sf:Card>
+                        <sf:Card>
+                            <sf:header>
+                                <card:Header
+                                    iconDisplayShape="Square"
+                                    iconBackgroundColor="Accent5"
+                                    iconSize="XL"
+                                    title="{i18n>Home.SouFuncionario}"
+                                    subtitle="{i18n>Home.SouFuncionarioDescricao}"
+                                    iconSrc="sap-icon://employee" />
+                            </sf:header>
+                        </sf:Card>
+                    </blocks>
+                </ObjectPageSubSection>
+            </subSections>
+        </ObjectPageSection>
+    </ObjectPageLayout>
 </mvc:View>

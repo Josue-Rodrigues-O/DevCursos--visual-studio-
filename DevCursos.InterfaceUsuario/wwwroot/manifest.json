@@ -79,12 +79,22 @@
 					"pattern": "",
 					"name": "home",
 					"target": "home"
+				},
+				{
+					"pattern": "login",
+					"name": "login",
+					"target": "login"
 				}
 			],
 			"targets": {
 				"home": {
 					"viewId": "home",
 					"viewName": "app.home.Home",
+					"append": true
+				},
+				"login": {
+					"viewId": "login",
+					"viewName": "app.login.Login",
 					"append": true
 				}
 			}

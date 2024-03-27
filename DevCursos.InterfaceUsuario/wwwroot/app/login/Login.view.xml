@@ -1,0 +1,140 @@
+<mvc:View
+    xmlns="sap.m"
+    height="100%"
+    displayBlock="true"
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc"
+    controllerName="dev.cursos.app.login.Login"
+>
+    <HBox height="100%"
+        width="100%"
+        justifyContent="SpaceBetween">
+        <VBox
+            width="50%"
+            alignItems="Center"
+            height="100%"
+            backgroundDesign="Solid"
+            class="sapUiVisibleOnlyOnDesktop sapUiHideOnTablet">
+            <Image
+                src="{/svgLogo}"
+                height="{/imageHeight}" />
+        </VBox>
+        <VBox
+            class="sapUiVisibleOnlyOnDesktop"
+            width="50%"
+            alignItems="Center"
+            justifyContent="Center"
+            height="100%">
+
+            <HBox width="40%">
+                <Image
+                    src="resources\images\puc-goias-horizontal.png"
+                    width="100%" />
+            </HBox>
+
+            <Title
+                width="100%"
+                text="Seja bem-vindo" />
+
+            <Input
+                width="100%"
+                placeholder="{i18n>Placeholder.Usuario}">
+                <layoutData>
+                    <FlexItemData
+                        minWidth="40%" />
+                </layoutData>
+            </Input>
+
+            <Input
+                width="100%"
+                type="Password"
+                placeholder="{i18n>Placeholder.Senha}">
+                <layoutData>
+                    <FlexItemData
+                        minWidth="40%" />
+                </layoutData>
+            </Input>
+
+            <HBox
+                width="40%">
+                <Button
+                    width="100%"
+                    text="Entrar"
+                    type="Emphasized"
+                    press="aoClicarEmEntar">
+                    <layoutData>
+                        <FlexItemData
+                            minWidth="100%"
+                            alignSelf="Stretch" />
+                    </layoutData>
+                </Button>
+            </HBox>
+
+
+            <Link
+                text="Esqueci a senha" />
+        </VBox>
+        <VBox
+            class="sapUiHideOnDesktop"
+            width="100%"
+            alignItems="Center"
+            justifyContent="Center"
+            height="100%">
+
+            <HBox width="40%">
+                <Image
+                    src="resources\images\puc-goias-horizontal.png"
+                    width="100%" />
+            </HBox>
+
+            <Title
+                width="100%"
+                text="Seja bem-vindo" />
+
+            <HBox
+                width="70%">
+                <Input
+                    width="100%"
+                    placeholder="{i18n>Placeholder.Usuario}">
+                    <layoutData>
+                        <FlexItemData
+                            minWidth="100%" />
+                    </layoutData>
+                </Input>
+            </HBox>
+
+            <HBox
+                width="70%">
+                <Input
+                    width="100%"
+                    type="Password"
+                    placeholder="{i18n>Placeholder.Senha}">
+                    <layoutData>
+                        <FlexItemData
+                            minWidth="100%" />
+                    </layoutData>
+                </Input>
+            </HBox>
+
+
+            <HBox
+                width="70%">
+                <Button
+                    width="100%"
+                    text="Entrar"
+                    type="Emphasized"
+                    press="aoClicarEmEntar">
+                    <layoutData>
+                        <FlexItemData
+                            minWidth="100%"
+                            alignSelf="Stretch" />
+                    </layoutData>
+                </Button>
+            </HBox>
+
+
+            <Link
+                text="Esqueci a senha" />
+        </VBox>
+    </HBox>
+</mvc:View>
