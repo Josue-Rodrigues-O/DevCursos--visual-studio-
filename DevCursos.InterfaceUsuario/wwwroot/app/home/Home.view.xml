@@ -154,7 +154,7 @@
                                 width="100%">
                                 <l:Grid
                                     containerQuery="true"
-                                    defaultSpan="XL2 L4">
+                                    defaultSpan="XL4 L4 M4 S12">
                                     <sf:Card>
                                         <sf:header>
                                             <card:Header
@@ -228,8 +228,9 @@
                     <ObjectPageSubSection>
                         <blocks>
                             <l:Grid
+                                width="100%"
                                 containerQuery="true"
-                                defaultSpan="XL2 L4">
+                                defaultSpan="XL4 L4 M4 S12">
                                 <sf:Card>
                                     <sf:header>
                                         <card:Header
@@ -292,11 +293,14 @@
                                 </sf:Card>
                             </l:Grid>
                         </blocks>
+                    </ObjectPageSubSection>
 
+                    <ObjectPageSubSection>
                         <blocks>
                             <l:Grid
+                                width="100%"
                                 containerQuery="true"
-                                defaultSpan="XL2 L4">
+                                defaultSpan="XL4 L4 M4 S12">
                                 <sf:Card>
                                     <sf:header>
                                         <card:Header
@@ -360,10 +364,14 @@
                             </l:Grid>
                         </blocks>
 
+                    </ObjectPageSubSection>
+
+                    <ObjectPageSubSection>
                         <blocks>
                             <l:Grid
+                                width="100%"
                                 containerQuery="true"
-                                defaultSpan="XL2 L4">
+                                defaultSpan="XL4 L4 M4 S12">
                                 <sf:Card>
                                     <sf:header>
                                         <card:Header
