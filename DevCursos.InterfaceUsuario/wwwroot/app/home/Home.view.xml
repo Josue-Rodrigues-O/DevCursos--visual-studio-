@@ -22,10 +22,6 @@
         editHeaderButtonPress="handleEditBtnPress">
         <headerTitle>
             <ObjectPageDynamicHeaderTitle>
-                <!-- Telas pequenas -->
-
-
-                <!-- Telas grandes -->
                 <expandedHeading>
                     <m:HBox>
                         <m:HBox class="sapUiVisibleOnlyOnDesktop">
@@ -204,7 +200,7 @@
                                         <sf:content>
                                             <m:HBox justifyContent="End" width="100%">
                                                 <m:Button
-                                                    press="aoClicarEmEntar"
+                                                    press="aoClicarEmEntrar"
                                                     text="Acessar"
                                                     type="Transparent"
                                                     class="sapUiSmallMarginEnd" />
@@ -469,6 +465,46 @@
                                     </sf:content>
                                 </sf:Card>
                             </l:Grid>
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+        </sections>
+        <sections>
+            <ObjectPageSection>
+                <subSections>
+                    <ObjectPageSubSection>
+                        <blocks>
+                            <m:HBox
+                                alignItems="Center"
+                                justifyContent="SpaceBetween">
+                                <m:VBox class="sapUiMediumMargin">
+                                    <m:Image
+                                        src="{/svgLogoFooterBlack}"
+                                        height="20vh" />
+                                </m:VBox>
+                                <m:VBox>
+                                    <m:ObjectIdentifier title="{i18n>Home.SedeReitoria}" />
+                                    <m:ObjectIdentifier text="{i18n>Home.NomeFaculdade}" />
+                                    <m:ObjectIdentifier text="{i18n>Home.EnderecoFaculdade}" />
+                                    <m:ObjectIdentifier text="{i18n>Home.Cep}" />
+                                    <m:ObjectIdentifier text="{i18n>Home.EmailFaculdade}" />
+                                    <m:ObjectIdentifier text="{i18n>Home.TelefoneFaculdade}" />
+                                </m:VBox>
+                                <m:HBox class="sapUiMediumMargin">
+                                    <m:VBox>
+                                        <m:Image
+                                            src="{/svgQrCode}"
+                                            height="20vh" />
+                                    </m:VBox>
+                                    <m:VBox
+                                        width="10vw"
+                                        wrap="Wrap">
+                                        <m:ObjectIdentifier title="{i18n>Home.EMEC}" />
+                                        <m:ObjectIdentifier text="{i18n>Home.EMECDescricao}" />
+                                    </m:VBox>
+                                </m:HBox>
+                            </m:HBox>
                         </blocks>
                     </ObjectPageSubSection>
                 </subSections>

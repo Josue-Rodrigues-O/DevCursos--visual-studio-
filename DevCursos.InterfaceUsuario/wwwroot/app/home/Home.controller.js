@@ -18,14 +18,18 @@ sap.ui.define([
         _aoCoincidirComRotaHome: function () {
             // let svgLogo = sap.ui.require.toUrl("dev/cursos/resources/images/logo.svg");
             let svgLogo = sap.ui.require.toUrl("dev/cursos/resources/images/puc-goias-horizontal.png");
+            let svgLogoFooterBlack = sap.ui.require.toUrl("dev/cursos/resources/images/puc-goias-black.svg");
+            let svgQrCode = sap.ui.require.toUrl("dev/cursos/resources/images/qr-code.svg");
             this.getView().setModel(new JSONModel({
                 imageWidth: "50vw",
                 imageHeight: "8vh",
-                svgLogo: svgLogo
+                svgLogo: svgLogo,
+                svgLogoFooterBlack: svgLogoFooterBlack,
+                svgQrCode: svgQrCode 
             }));
         },
 
-        aoClicarEmEntar() {
+        aoClicarEmEntrar() {
             this.navegarPara("login")
         },
 
