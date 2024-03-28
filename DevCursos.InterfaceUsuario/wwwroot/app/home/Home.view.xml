@@ -13,7 +13,8 @@
     displayBlock="true"
     controllerName="dev.cursos.app.home.Home"
 >
-    <ObjectPageLayout id="entidadeDeEntidade"
+    <ObjectPageLayout
+        showAnchorBarPopover="false"
         enableLazyLoading="false"
         showTitleInHeaderContent="true"
         showEditHeaderButton="true"
@@ -99,7 +100,7 @@
                     </m:VBox>
                     <m:VBox justifyContent="Center"
                         class="sapUiSmallMarginEnd">
-                        <ObjectPageHeaderActionButton id="closeColumn"
+                        <ObjectPageHeaderActionButton
                             press="irParaLista"
                             icon="sap-icon://email"
                             tooltip="{i18n>Home.Email}"
@@ -154,7 +155,7 @@
                                 width="100%">
                                 <l:Grid
                                     containerQuery="true"
-                                    defaultSpan="XL4 L4 M4 S12">
+                                    defaultSpan="XL4 L4 M12 S12">
                                     <sf:Card>
                                         <sf:header>
                                             <card:Header
@@ -230,7 +231,7 @@
                             <l:Grid
                                 width="100%"
                                 containerQuery="true"
-                                defaultSpan="XL4 L4 M4 S12">
+                                defaultSpan="XL4 L4 M12 S12">
                                 <sf:Card>
                                     <sf:header>
                                         <card:Header
@@ -300,7 +301,7 @@
                             <l:Grid
                                 width="100%"
                                 containerQuery="true"
-                                defaultSpan="XL4 L4 M4 S12">
+                                defaultSpan="XL4 L4 M12 S12">
                                 <sf:Card>
                                     <sf:header>
                                         <card:Header
@@ -371,7 +372,7 @@
                             <l:Grid
                                 width="100%"
                                 containerQuery="true"
-                                defaultSpan="XL4 L4 M4 S12">
+                                defaultSpan="XL4 L4 M12 S12">
                                 <sf:Card>
                                     <sf:header>
                                         <card:Header
