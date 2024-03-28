@@ -18,100 +18,139 @@
         enableLazyLoading="false"
         showTitleInHeaderContent="true"
         showEditHeaderButton="true"
-        showFooter="true"
+        showFooter="false"
         editHeaderButtonPress="handleEditBtnPress">
         <headerTitle>
             <ObjectPageDynamicHeaderTitle>
+                <!-- Telas pequenas -->
+
+
+                <!-- Telas grandes -->
                 <expandedHeading>
                     <m:HBox>
-                        <m:VBox justifyContent="Center"
-                            class="sapUiSmallMarginEnd">
-                            <m:Text text="Institucional" />
-                        </m:VBox>
-                        <m:VBox justifyContent="Center"
-                            class="sapUiSmallMarginEnd">
-                            <m:Text text="Escolas" />
-                        </m:VBox>
-                        <m:VBox justifyContent="Center"
-                            class="sapUiSmallMarginEnd">
-                            <m:Text text="Eventos e Notícias" />
-                        </m:VBox>
-                        <m:VBox justifyContent="Center"
-                            class="sapUiSmallMarginEnd">
-                            <m:Text text="Biblioteca" />
-                        </m:VBox>
-                        <m:VBox justifyContent="Center"
-                            class="sapUiSmallMarginEnd">
-                            <m:Text text="Bolsas e Financiamentos" />
-                        </m:VBox>
-                        <m:VBox justifyContent="Center"
-                            class="sapUiSmallMarginEnd">
-                            <m:Text text="Serviços" />
-                        </m:VBox>
+                        <m:HBox class="sapUiVisibleOnlyOnDesktop">
+                            <m:VBox justifyContent="Center"
+                                class="sapUiSmallMarginEnd">
+                                <m:Text text="Institucional" />
+                            </m:VBox>
+                            <m:VBox justifyContent="Center"
+                                class="sapUiSmallMarginEnd">
+                                <m:Text text="Escolas" />
+                            </m:VBox>
+                            <m:VBox justifyContent="Center"
+                                class="sapUiSmallMarginEnd">
+                                <m:Text text="Eventos e Notícias" />
+                            </m:VBox>
+                            <m:VBox justifyContent="Center"
+                                class="sapUiSmallMarginEnd">
+                                <m:Text text="Biblioteca" />
+                            </m:VBox>
+                            <m:VBox justifyContent="Center"
+                                class="sapUiSmallMarginEnd">
+                                <m:Text text="Bolsas e Financiamentos" />
+                            </m:VBox>
+                            <m:VBox justifyContent="Center"
+                                class="sapUiSmallMarginEnd">
+                                <m:Text text="Serviços" />
+                            </m:VBox>
+                        </m:HBox>
+
+                        <m:HBox class="sapUiVisibleOnlyOnPhone">
+                            <m:VBox
+                                justifyContent="Center"
+                                class="sapUiSmallMarginEnd">
+                                <m:Image
+                                    src="{/svgLogo}"
+                                    height="5vh" />
+                            </m:VBox>
+                            <m:VBox justifyContent="Center"
+                                class="sapUiSmallMarginEnd">
+                                <m:Link
+                                    text="{i18n>Home.Atendimento}" />
+                            </m:VBox>
+                            <m:VBox justifyContent="Center"
+                                class="sapUiSmallMarginEnd">
+                                <m:Link
+                                    text="{i18n>Home.SOL}" />
+                            </m:VBox>
+                        </m:HBox>
                     </m:HBox>
                 </expandedHeading>
 
                 <snappedHeading>
                     <m:HBox>
-                        <m:VBox
-                            justifyContent="Center"
-                            class="sapUiSmallMarginEnd">
-                            <m:Image
-                                src="{/svgLogo}"
-                                height="{/imageHeight}" />
-                        </m:VBox>
-                        <m:VBox
-                            justifyContent="Center"
-                            class="sapUiSmallMarginEnd">
-                            <m:ObjectIdentifier title="{i18n>Home.Graduacao}"
-                                active="false" />
-                        </m:VBox>
-                        <m:VBox
-                            justifyContent="Center"
-                            class="sapUiSmallMarginEnd">
-                            <m:ObjectIdentifier title="{i18n>Home.PosGraguacao}"
-                                active="false" />
-                        </m:VBox>
-                        <m:VBox
-                            justifyContent="Center"
-                            class="sapUiSmallMarginEnd">
-                            <m:ObjectIdentifier title="{i18n>Home.PesquisaEInovacao}"
-                                active="false" />
-                        </m:VBox>
-                        <m:VBox
-                            justifyContent="Center"
-                            class="sapUiSmallMarginEnd">
-                            <m:ObjectIdentifier title="{i18n>Home.Extensao}"
-                                active="false" />
-                        </m:VBox>
+                        <m:HBox class="sapUiVisibleOnlyOnDesktop">
+                            <m:VBox
+                                justifyContent="Center"
+                                class="sapUiSmallMarginEnd">
+                                <m:Image
+                                    src="{/svgLogo}"
+                                    height="{/imageHeight}" />
+                            </m:VBox>
+                            <m:VBox
+                                justifyContent="Center"
+                                class="sapUiSmallMarginEnd">
+                                <m:ObjectIdentifier title="{i18n>Home.Graduacao}" />
+                            </m:VBox>
+                            <m:VBox
+                                justifyContent="Center"
+                                class="sapUiSmallMarginEnd">
+                                <m:ObjectIdentifier title="{i18n>Home.PosGraguacao}" />
+                            </m:VBox>
+                            <m:VBox
+                                justifyContent="Center"
+                                class="sapUiSmallMarginEnd">
+                                <m:ObjectIdentifier title="{i18n>Home.PesquisaEInovacao}" />
+                            </m:VBox>
+                            <m:VBox
+                                justifyContent="Center"
+                                class="sapUiSmallMarginEnd">
+                                <m:ObjectIdentifier title="{i18n>Home.Extensao}" />
+                            </m:VBox>
+                        </m:HBox>
+
+                        <m:HBox class="sapUiVisibleOnlyOnPhone">
+                            <m:VBox
+                                justifyContent="Center"
+                                class="sapUiSmallMarginEnd">
+                                <m:Image
+                                    src="{/svgLogo}"
+                                    height="5vh" />
+                            </m:VBox>
+                        </m:HBox>
                     </m:HBox>
                 </snappedHeading>
 
                 <actions>
                     <m:VBox justifyContent="Center"
-                        class="sapUiSmallMarginEnd">
+                        class="sapUiSmallMarginEnd sapUiVisibleOnlyOnDesktop">
                         <m:Link
                             text="{i18n>Home.Atendimento}" />
                     </m:VBox>
                     <m:VBox justifyContent="Center"
-                        class="sapUiSmallMarginEnd">
+                        class="sapUiSmallMarginEnd sapUiVisibleOnlyOnDesktop">
                         <m:Link
                             text="{i18n>Home.SOL}" />
                     </m:VBox>
                     <m:VBox justifyContent="Center"
-                        class="sapUiSmallMarginEnd">
+                        class="sapUiTinyMarginEnd sapUiVisibleOnlyOnDesktop">
                         <ObjectPageHeaderActionButton
                             press="irParaLista"
                             icon="sap-icon://email"
                             tooltip="{i18n>Home.Email}"
-                            type="Default" />
+                            type="Transparent" />
+                    </m:VBox>
+                    <m:VBox class="sapUiHideOnDesktop sapUiSmallMarginTop">
+                        <m:Button type="Transparent" id="button" icon="sap-icon://menu"
+                            press="onPress"
+                            ariaHasPopup="Menu" />
                     </m:VBox>
                 </actions>
             </ObjectPageDynamicHeaderTitle>
         </headerTitle>
 
         <headerContent>
-            <m:HBox>
+            <m:HBox class="sapUiVisibleOnlyOnDesktop">
                 <m:VBox
                     justifyContent="Center"
                     class="sapUiSmallMarginEnd">
@@ -122,26 +161,22 @@
                 <m:VBox
                     justifyContent="Center"
                     class="sapUiSmallMarginEnd">
-                    <m:ObjectIdentifier title="{i18n>Home.Graduacao}"
-                        active="false" />
+                    <m:ObjectIdentifier title="{i18n>Home.Graduacao}" />
                 </m:VBox>
                 <m:VBox
                     justifyContent="Center"
                     class="sapUiSmallMarginEnd">
-                    <m:ObjectIdentifier title="{i18n>Home.PosGraguacao}"
-                        active="false" />
+                    <m:ObjectIdentifier title="{i18n>Home.PosGraguacao}" />
                 </m:VBox>
                 <m:VBox
                     justifyContent="Center"
                     class="sapUiSmallMarginEnd">
-                    <m:ObjectIdentifier title="{i18n>Home.PesquisaEInovacao}"
-                        active="false" />
+                    <m:ObjectIdentifier title="{i18n>Home.PesquisaEInovacao}" />
                 </m:VBox>
                 <m:VBox
                     justifyContent="Center"
                     class="sapUiSmallMarginEnd">
-                    <m:ObjectIdentifier title="{i18n>Home.Extensao}"
-                        active="false" />
+                    <m:ObjectIdentifier title="{i18n>Home.Extensao}" />
                 </m:VBox>
             </m:HBox>
         </headerContent>
